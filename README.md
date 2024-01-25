@@ -87,5 +87,47 @@ Please note that the script's effectiveness may depend on the permissions of the
 For the latest version and additional details, refer to the script source.
 
 
+# CPU Usage Monitor Script
 
+This script provides a simple and efficient way to monitor CPU usage by each user on a Unix-like system. It utilizes common Unix commands such as `id`, `lscpu`, `getent`, and `top` to gather and present CPU usage information.
+
+## Usage
+
+1. Copy the script content to a file, e.g., `cpuUsageMonitor.sh`.
+2. Make the script executable:
+   ```bash
+   chmod +x cpuUsageMonitor.sh
+   ```
+3. Run the script:
+   ```bash
+   ./cpuUsageMonitor.sh
+   ```
+
+## Script Explanation
+
+- The script starts by obtaining the username of the current user (`own`) and the total number of CPUs available on the system (`cpus`).
+- It then iterates through all users on the system (excluding the current user) using `getent passwd`.
+- For each user, it runs the `top` command in the background, capturing CPU usage information (`$9` column) and calculating the total CPU usage and CPU usage per core.
+- To prevent excessive parallel processes, a small sleep duration is added after starting each background process.
+- The script waits for all background processes to complete using the `wait` command.
+- Finally, it prints the CPU usage summary for each user, excluding the current user.
+
+## Example Output
+
+The output includes three columns: username, total CPU usage, and CPU usage per core.
+
+```plaintext
+user1  20.1%  0.25
+user2  15.5%  0.19
+...
+own_user  5.2%  0.06
+```
+
+## Notes
+
+- This script relies on the `top` command, and its output format may vary across different systems. Adjustments may be needed based on the specific `top` command version available on your system.
+- The script uses a simple sleep duration to limit the number of parallel processes. Depending on your system's performance, you may need to adjust this value for optimal results.
+- Ensure that the user running the script has the necessary permissions to access process information for other users.
+
+Feel free to customize the script according to your specific requirements or integrate it into your system monitoring tools.
 
