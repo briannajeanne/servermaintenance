@@ -131,3 +131,45 @@ own_user  5.2%  0.06
 
 Feel free to customize the script according to your specific requirements or integrate it into your system monitoring tools.
 
+
+# Directory Size Summary Script
+
+This script provides a quick and efficient way to summarize the sizes of directories within the current working directory on a Unix-like system. It uses the `du` command to calculate the disk usage of each subdirectory, sorts the results in descending order, and displays the summary.
+
+## Usage
+
+1. Open a terminal and navigate to the directory you want to summarize.
+2. Copy the script content to a file, e.g., `storage.sh`.
+3. Make the script executable:
+   ```bash
+   chmod +x storage.sh
+   ```
+4. Run the script with elevated privileges (using `sudo`):
+   ```bash
+   sudo ./storage.sh
+   ```
+
+## Script Explanation
+
+- The script uses `du -s *` to calculate the disk usage of each subdirectory in the current working directory.
+- The results are then sorted in descending order based on size using `sort -k 1,1rn`.
+- The output provides a summary of directory sizes, with the largest directories listed first.
+
+## Example Output
+
+The output includes two columns: directory size in kilobytes and directory name.
+
+```plaintext
+20480   directory1
+10240   directory2
+5120    directory3
+...
+```
+
+## Notes
+
+- Ensure you have the necessary permissions to access the directory and its contents.
+- The use of `sudo` is necessary to access some directories and retrieve accurate size information.
+- This script is specifically designed for Unix-like systems and may not work as expected on other platforms.
+
+Feel free to customize the script according to your specific requirements or integrate it into your system administration tasks for quick directory size assessments.
