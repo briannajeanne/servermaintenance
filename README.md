@@ -7,12 +7,12 @@ This script provides a way to monitor CPU usage by user on a Unix-like system. I
 1. Save the script to a file, e.g., `cpu_monitor.sh`.
 2. Make the script executable:
    ```bash
-   chmod +x cpu_monitor.sh
+   chmod +x usage.sh
    ```
 
 3. Run the script:
    ```bash
-   ./cpu_monitor.sh
+   ./usage.sh
    ```
 
 ## Script Explanation
@@ -51,11 +51,11 @@ This script calculates and displays the total memory usage in percentage for eac
 1. Save the script to a file, e.g., `showPerUserMem.sh`.
 2. Make the script executable:
    ```bash
-   chmod +x showPerUserMem.sh
+   chmod +x mem.sh
    ```
 3. Run the script:
    ```bash
-   ./showPerUserMem.sh
+   ./mem.sh
    ```
 
 ## Script Explanation
@@ -96,11 +96,11 @@ This script provides a simple and efficient way to monitor CPU usage by each use
 1. Copy the script content to a file, e.g., `cpuUsageMonitor.sh`.
 2. Make the script executable:
    ```bash
-   chmod +x cpuUsageMonitor.sh
+   chmod +x cpu.sh
    ```
 3. Run the script:
    ```bash
-   ./cpuUsageMonitor.sh
+   ./cpu.sh
    ```
 
 ## Script Explanation
