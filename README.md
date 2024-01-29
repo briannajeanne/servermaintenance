@@ -40,8 +40,6 @@ own_user  5.2%  0.06
 - This script relies on the `top` command, and its output format may vary across different systems. Adjustments may be needed based on the specific `top` command version available on your system.
 - The script uses a simple sleep duration to limit the number of parallel processes. Depending on your system's performance, you may need to adjust this value for optimal results.
 
-Feel free to modify the script according to your specific requirements and system characteristics.
-
 # Memory Usage by User Script
 
 This script calculates and displays the total memory usage in percentage for each user currently logged into a Unix-like system. It utilizes basic Unix commands such as `free`, `who`, and `ps` to gather information about memory usage and provides a summary in a user-friendly format.
@@ -82,9 +80,7 @@ own_user  5.67
 - The `ps` command output may vary between systems, so it's advisable to test and modify the script based on the specific version of your system.
 - Feel free to customize the script according to your needs or integrate it into your system monitoring tools.
 
-Please note that the script's effectiveness may depend on the permissions of the user executing it. Ensure that the user running the script has the necessary privileges to access process information for other users.
 
-For the latest version and additional details, refer to the script source.
 
 
 # CPU Usage Monitor Script
@@ -172,4 +168,3 @@ The output includes two columns: directory size in kilobytes and directory name.
 - The use of `sudo` is necessary to access some directories and retrieve accurate size information.
 - This script is specifically designed for Unix-like systems and may not work as expected on other platforms.
 
-Feel free to customize the script according to your specific requirements or integrate it into your system administration tasks for quick directory size assessments.
